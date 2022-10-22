@@ -1,6 +1,6 @@
 services:
     franken:
-        image: dunglas/frankenphp:latest
+#        image: dunglas/frankenphp:latest
         build:
             dockerfile: Dockerfile
         extra_hosts:

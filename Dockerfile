@@ -6,11 +6,8 @@ RUN wget https://xdebug.org/files/xdebug-3.2.0RC1.tgz  \
     && phpize \
     && ./configure --enable-xdebug \
     && make \
-    && make install \
-    && phpize \
-    && make
+    && make install
 
 RUN echo "zend_extension=opcache.so" >> /usr/local/lib/php.ini \
      && echo "xdebug.idekey="PHPSTORM"" >> /usr/local/lib/php.ini \
-     && echo "opcache.enable=1" >> /usr/local/lib/php.ini \
      && echo "zend_extension=xdebug.so" >> /usr/local/lib/php.ini
